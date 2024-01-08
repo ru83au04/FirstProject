@@ -134,19 +134,22 @@ const TodoList = () => {
                              placeholder="Description"
                            />
                          <button onClick={handleAddTask}>Add Task</button>
-                         <button className="hidden" id="completed"
-                                 onClick={() => setCompletedPage(!completedPage)}>Completed</button>
-                             {completedPage && (
-                                 <div className="table doneTasks">
-                                     {doneTasks.map(task => (
-                                         <span key={task.id}>{task.title}<br /></span>
-                                     ))}
-                                     <button onClick={() => deleteCompletedTasks()}>Clear</button>
-                                 </div>
-                             )}
+                         <button onClick={changeTable}>Completed</button>
                      </div>
                  </div>
+                 <div className="table doneTasks">
+                      <button onClick={() => setCompletedPage(!completedPage)}>Completed</button>
+                          {completedPage && (
+                              <div>
+                                  {doneTasks.map(task => (
+                                      <span key={task.id}>{task.title}<br /></span>
+                                  ))}
+                                  <button onClick={() => deleteCompletedTasks()}>Clear</button>
+                              </div>
+                          )}
+                  </div>
              </div>
+
          );
      };
 

@@ -12,7 +12,7 @@ html, body{
     align-item: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100svh;
 }
 
 h1{
@@ -29,7 +29,7 @@ h1{
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
+    min-height: 600px;
     transform: translate(-50%, -50%);
 }
 
@@ -63,6 +63,7 @@ h1{
     flex-direction: column;
     padding: 0.40px;
     height: 100%;
+
     overflow: hidden;
     transition: opacity 0.5s ease-in-out;
     opacity: 1;
@@ -80,10 +81,12 @@ h1{
 
 .tasks{
     height: auto;
+    z-index:1;
 }
 
 .doneTasks{
     height: auto;
+    z-index: 0;
 }
 /*
 .tasks{
