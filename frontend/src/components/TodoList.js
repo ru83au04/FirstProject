@@ -134,7 +134,6 @@ const TodoList = () => {
                              placeholder="Description"
                            />
                          <button onClick={handleAddTask}>Add Task</button>
-                         <button onClick={changeTable}>Completed</button>
                      </div>
                  </div>
                  <div className="table doneTasks">
